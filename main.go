@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/tredfield/go-slalom/cmd"
+import "go-slalom/cmd"
 
 func main() {
 	cmd.Execute()

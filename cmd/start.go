@@ -23,13 +23,11 @@ import (
 // startCmd represents the start command
 var startCmd = &cobra.Command{
 	Use:   "start",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+	Short: "Starts the web service",
+	Long: `Performs the following actions:
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+- Starts web service
+- Does...`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("start called")
 	},
