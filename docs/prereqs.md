@@ -5,7 +5,7 @@ following setups:
 - Docker Desktop
 - Homebrew
 - go
-- Github
+- (optional) Github
 
 ### Install Docker Desktop
 
@@ -43,7 +43,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 
 ### Github Account
 
-If you do not already have a github account please create one. 
+If you do not already have a github account you may want to create one to push code for these guides.
 
 https://github.com/join
 

@@ -1,0 +1,9 @@
+apiVersion: skaffold/v1beta9
+kind: Config
+build:
+  artifacts:
+  - image: go-slalom
+deploy:
+  kubectl:
+    manifests:
+    - deploy/skaffold/deployment.yaml
