@@ -17,7 +17,7 @@ These guides will help you
 * [Pre-requisite Instructions](docs/prereqs.md)
 * [Why Go](docs/why-go.md)
 * [Why Kubernetes](docs/why-kubernetes.md)
-* [Setup Instructions](docs/setup.md)
 * [Hello World in Go](docs/go-hello-world.md)
+* [Deploy go-slalom](docs/deploy-go-slalom.md)
 
 ![gopher](docs/images/go-n-docker.png)

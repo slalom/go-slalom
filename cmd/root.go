@@ -16,10 +16,13 @@ var loglevel = "info"
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "go-slalom",
-	Short: "A simple web service in go",
-	Long: `A simple web service in go. This web service performs the following:
+	Short: "A simple kubernetes service in go",
+	Long: `A simple kubernetes service in go. This service performs the following:
 
-- It does...
+- handles interrupts expected from kubernetes
+- basic liveness and readiness end-points
+- endpoints for enabling/disabling readiness and liveness endpoints
+- endpoint for basic service information
 	`,
 	PreRun: setLogLevel,
 

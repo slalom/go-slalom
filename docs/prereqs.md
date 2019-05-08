@@ -51,6 +51,8 @@ brew install go
 
 ### Optional
 
+Below are not required helpful to do beforehand
+
 #### Kubernetes Dashboard
 
 You will likely want to setup a dashboard for Kubernetes but it is not required. Follow the steps in the link below to setup the dashboard
