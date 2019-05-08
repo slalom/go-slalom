@@ -6,6 +6,8 @@ following setups:
 - Homebrew
 - go
 - (optional) Github
+- (optional) Kubernetes Dashboard
+
 
 ### Install Docker Desktop
 
@@ -41,9 +43,22 @@ Linux or Windows Subsystem for Linux (WSL)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
 ```
 
+### Install Go
+
+```bash
+brew install go
+```
+
+
 ### Github Account
 
 If you do not already have a github account you may want to create one to push code for these guides.
 
 https://github.com/join
 
+
+### Kubernetes Dashboard
+
+You will likely want to setup a dashboard for Kubernetes but it is not required. Follow the steps in the link below to setup the dashboard
+
+https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
