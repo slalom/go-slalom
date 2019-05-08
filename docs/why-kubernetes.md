@@ -25,6 +25,8 @@ Efficiently scale horizontally using metrics (cpu, memory, etc). Soon, vertical 
 #### Repeatable
 Because everything is configured in yaml, it is easy to repeat. E.g. create multiple environments
 
+![kubernetes](images/kubernetes.png)
+
 
 
 

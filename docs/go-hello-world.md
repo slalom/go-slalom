@@ -39,7 +39,12 @@ open http://localhost:8080/$USER
 
 So what did you do? When you ran `go run hello.go`, go compiled hello.go, created a binary in a temporary folder, and ran it.
 
-### Some Basics
+Alternatively you could build and run it with 
+```bash
+go build hello.go
+./hello
+```
+In above, go compiled hello.go and created a binary in current path. You then can run it.
 
-**package main**
-Packages in go are similar to Java and other languages for structuring code. Executable commands must be in the `main` package.
+
+![gopher ninja](images/gopher-ninja.png)

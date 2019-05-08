@@ -49,16 +49,28 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 brew install go
 ```
 
+### Optional
 
-### Github Account
+#### Kubernetes Dashboard
+
+You will likely want to setup a dashboard for Kubernetes but it is not required. Follow the steps in the link below to setup the dashboard
+
+https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+
+
+#### Github Account
 
 If you do not already have a github account you may want to create one to push code for these guides.
 
 https://github.com/join
 
+#### go 101
 
-### Kubernetes Dashboard
+[go 101](go-101.md)
 
-You will likely want to setup a dashboard for Kubernetes but it is not required. Follow the steps in the link below to setup the dashboard
+#### kubernetes 101
 
-https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+[kubernetes 101](k8s-101.md)
+
+
+![gopher](images/gopher.png)
