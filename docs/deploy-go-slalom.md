@@ -10,14 +10,17 @@ go-slalom demonstrates how to create a basic service to run in kubernetes. The s
 ### run go-slalom
 
 ```bash
-# install 
+# tell go to use modules (still opt-in feature)
+export GO111MODULE=on 
+
+# install go-slalom
 go get github.com/tredfield/go-slalom
 ```
 
 ### build go-slalom locally
 
 ```bash
-go get git@github.com:tredfield/go-slalom.git
+git clone git@github.com:tredfield/go-slalom.git
 ```
 
 ### go-slalom cli
