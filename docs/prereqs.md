@@ -49,6 +49,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 brew install go
 ```
 
+Create your go workspace
+
+```bash
+mkdir $HOME/go
+``` 
+
+Update PATH in your profile to include GOBIN
+```bash
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+
+See ["How to Write Go Code"](https://golang.org/doc/code.html) for more information on go workspace and organization
+
+
 ### Optional
 
 Below are not required helpful to do beforehand
