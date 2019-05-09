@@ -3,7 +3,6 @@ package api
 import (
 	"github.com/sirupsen/logrus"
 	"net/http"
-
 	"runtime"
 	"strconv"
 
@@ -25,7 +24,7 @@ func (s *Server) infoHandler(w http.ResponseWriter, r *http.Request) {
 		NumGoroutine string `json:"num_goroutine"`
 		NumCPU       string `json:"num_cpu"`
 	}{
-		Hostname:     "travis",
+		Hostname:     "TODO",
 		Version:  version.Version,
 		Revision: version.Revision,
 		//Color:        s.config.UIColor,

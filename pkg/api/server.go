@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+func init() {
+	logrus.SetFormatter(&logrus.JSONFormatter{})
+}
+
 var (
 	logger = logrus.WithFields(logrus.Fields{"service": "api"})
 )

@@ -5,7 +5,6 @@ following setups:
 - Docker Desktop
 - Homebrew
 - go
-- (optional) Github
 - (optional) Kubernetes Dashboard
 
 
@@ -73,12 +72,6 @@ You will likely want to setup a dashboard for Kubernetes but it is not required.
 
 https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
 
-
-#### Github Account
-
-If you do not already have a github account you may want to create one to push code for these guides.
-
-https://github.com/join
 
 #### go 101
 
