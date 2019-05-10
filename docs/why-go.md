@@ -8,6 +8,15 @@ My favorite go proverbs from https://go-proverbs.github.io
 
 > Reflection is never clear.
 
+## What is Go?
+
+Go was developed by Google in 2007. It combines the ease of programming of an interpreted, dynamically typed language
+with the efficiency and safety of a statically typed, compiled language.
+
+It was designed to take advantage of multi-core, multi-processor machines making it ideal for developing fast services
+that need to scale.
+
+## Ok, But why do I care?
 Based on my experience using Go for the last 2 years I highly recommend you learn and use Go for new services that you
 create. 
 
@@ -37,10 +46,21 @@ you need to build a web server, do routing, html templates, file serving, res/re
 - Inheritance and Classes. It uses structs, interfaces, and struct embedding to achieve powerful but simple OOP.
 - Generics. Generics implementations add complexity and slow compilation or execution. Using interfaces and type aliases 
 can suffice for generics. And after a while you won't miss `List<Dictionary<string<IEnumerable<HttpRequest>>>>`
+  - however, generics have been proposed for go 2.0
 - Annotations
 - Exceptions
 
 Some of the points above you may find shocking and think that go lacks "modern" language features... but trust me, the
-small amount of extra code you may write is worth the time you will save.  
+small amount of extra code you may write is worth the time you will save.
+
+## Give Go a Chance
+
+I will be frank and say when I first started using go I was not impressed. It seemed a bit archaic. I was fond of 
+lambdas and streams in Java and the one-liners you can write would now take multiple lines and loops in go. I loved SpringBoot
+and magic it brings with annotations. 
+
+However, I think we tend to over design and over think how we code. Go helps you focus on the problem and less on the code.
+I still like SpringBoot, but with tools available for go do not miss it.
+ 
 
 ![oo-dev](images/go-dev.jpeg)

@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// JSONResponse takes a provided result and marshals to json applying appropriate headers
 func (s *Server) JSONResponse(w http.ResponseWriter, r *http.Request, result interface{}) {
 	body, err := json.Marshal(result)
 	if err != nil {

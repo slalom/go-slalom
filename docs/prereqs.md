@@ -47,7 +47,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 ```bash
 brew install go
 ```
-
+<!--
 Create your go workspace
 
 ```bash
@@ -60,7 +60,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 ```
 
 See ["How to Write Go Code"](https://golang.org/doc/code.html) for more information on go workspace and organization
-
+-->
 
 ### Optional
 

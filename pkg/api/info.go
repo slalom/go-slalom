@@ -10,7 +10,7 @@ import (
 )
 
 func (s *Server) infoHandler(w http.ResponseWriter, r *http.Request) {
-	logger.WithFields(logrus.Fields{"api": "info",}).Infof("handling request")
+	logger.WithFields(logrus.Fields{"api": "info"}).Infof("handling request")
 
 	data := struct {
 		Hostname     string `json:"hostname"`
@@ -24,7 +24,7 @@ func (s *Server) infoHandler(w http.ResponseWriter, r *http.Request) {
 		NumGoroutine string `json:"num_goroutine"`
 		NumCPU       string `json:"num_cpu"`
 	}{
-		Hostname:     "TODO",
+		Hostname: "TODO",
 		Version:  version.Version,
 		Revision: version.Revision,
 		//Color:        s.config.UIColor,

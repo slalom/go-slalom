@@ -68,7 +68,7 @@ In above, go compiled hello.go and created a binary in current path. You then ca
 
 ### compiled server
 
-In many other languages you need to deploy your app to a web app server or "bundle" a server with your app. With go the  
-server is built and compiled into your app.
+In many other languages you need to deploy your app to a web app server or "bundle" a server with your app. With go the 
+server is built and compiled into your app (binary).
 
 ![gopher ninja](images/gopher-ninja.png)

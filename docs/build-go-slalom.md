@@ -69,4 +69,22 @@ In a separate console run `curl localhost:8008/version`. You should see similar 
 }
 ```
 
+### go-slalom server
+
+The `start` command (in cmd package) calls
+```go
+api.NewServer().ListenAndServe()
+``` 
+
+See `pkg/api/server.go`. It does the following:
+
+- creates a signal handler to handle interrupts
+- registers handler functions
+- create and run the server in background using a goroutine
+- enable probes to tell kubernetes it is ready for traffic
+- wait for an interrupt
+- disable probes to tell kubernetes it is unavailable
+- gracefully shutdown server
+
+
 ![gopher-head](images/gopher_head.png)

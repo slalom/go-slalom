@@ -19,11 +19,13 @@ This repository and guides will help you
 * [Hello World in Go](docs/go-hello-world.md)
 * [Run go-slalom](docs/build-go-slalom.md)
 * [Deploy go-slalom with skaffold](docs/skaffold-go-slalom.md)
+* [Release go-slalom](docs/go-releaser.md)
+* [What's Next?](docs/whats-next.md)
 
 ### Quick 101 on go and kubernetes
 
-These guides are an introduction to go and kubernetes but are not intended to teach you either. Below are quick 101s 
-that should only take a few minutes with references to more help if you are interested
+The above guides are an introduction to go and kubernetes but are not intended to teach you either. However, below are quick 101s 
+that should only take a few minutes with references to more help
 
 - [go 101](docs/go-101.md)
 - [kubernetes 101](docs/k8s-101.md)
