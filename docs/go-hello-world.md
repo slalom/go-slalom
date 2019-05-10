@@ -21,11 +21,11 @@ func main() {
 }
 ```
 
-## Steps
+### Steps
 
-- create the `hello.go` file
+- create a `hello.go` file using below
+
 ```bash
-cat <<EOF > hello.go
 package main
 
 import (
@@ -42,12 +42,13 @@ func main() {
     http.HandleFunc("/", handler)
     log.Fatal(http.ListenAndServe(":8080", nil))
 }
-EOF
 ```
+
 - run the following command and leave console open
 ```bash
 go run hello.go
 ```
+
 - in browser go to (replace YOUR_NAME with your name) `http://localhost:8080/YOUR_NAME` or in separate console
 ```bash
 open http://localhost:8080/$USER
