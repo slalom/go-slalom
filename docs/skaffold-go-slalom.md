@@ -1,6 +1,6 @@
 # deploy go-slalom to kubernetes
 
-We will use skaffold to deploy go-slalom. 
+We will use [skaffold](https://skaffold.dev) to deploy go-slalom. 
 
 Skaffold is a tool that will build a docker image and deploy it to kubernetes. It can run in `dev` mode where it 
 listens to changes and will automatically rebuild and update the deployed version in kubernetes. Or you can use `run`
@@ -117,7 +117,7 @@ curl localhost:8081
 
 You should now see the hostname matches the pod it is running in.
 
-#### how is skaffold managing the deployment?
+#### How is skaffold managing the deployment?
 
 When skaffold detects the change it is doing the same steps listed above. The thing to note is that the image configured in
 [deploy/skaffold/deployment.yml](../deploy/skaffold/deployment.yaml) does not designate the tag. Skaffold manages the tag
