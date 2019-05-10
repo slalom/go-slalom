@@ -1,10 +1,7 @@
 # Why Kubernetes
 
 This guide is not a how-to on Kubernetes as that is a much longer discussion. But quickly I want to cover the reasons
-why Slalom consultants should consider Kubernetes if they are not already using it. That said, here is a quick Kubernetes
-101:
-
-[Kubernetes 101](k8s-101.md)
+why Slalom consultants should consider Kubernetes if they are not already using it. 
 
 ### Cloud Agnostic
 Every major cloud provider now provides a managed Kubernetes offering. Thus you can easily create a Kubernetes cluster and deploy your
@@ -17,7 +14,7 @@ application to multiple cloud providers.
 Deploying a new version of an application or updating an application running in Kubernetes is fast and easy.
 
 #### Easily Assemble a Complete Stack
-Use Helm Charts (and other tools) to deploy databases, middleware, and other components for your stack quick and easily. 
+Use [Helm](https://helm.sh) Charts (and other tools) to deploy databases, middleware, and other components for your application quick and easily. 
 
 #### Scaling
 Efficiently scale horizontally using metrics (cpu, memory, etc). Soon, vertical auto-scaling.

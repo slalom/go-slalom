@@ -5,7 +5,6 @@ following setups:
 - Docker Desktop
 - Homebrew
 - go
-- (optional) Github
 - (optional) Kubernetes Dashboard
 
 
@@ -48,8 +47,24 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/i
 ```bash
 brew install go
 ```
+<!--
+Create your go workspace
+
+```bash
+mkdir $HOME/go
+``` 
+
+Update PATH in your profile to include GOBIN
+```bash
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+
+See ["How to Write Go Code"](https://golang.org/doc/code.html) for more information on go workspace and organization
+-->
 
 ### Optional
+
+Below are not required helpful to do beforehand
 
 #### Kubernetes Dashboard
 
@@ -57,12 +72,6 @@ You will likely want to setup a dashboard for Kubernetes but it is not required.
 
 https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
 
-
-#### Github Account
-
-If you do not already have a github account you may want to create one to push code for these guides.
-
-https://github.com/join
 
 #### go 101
 

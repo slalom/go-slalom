@@ -12,7 +12,7 @@ var startCmd = &cobra.Command{
 	Long: `Performs the following actions:
 
 - Starts web service`,
-	Run:    start,
+	Run: start,
 }
 
 func init() {

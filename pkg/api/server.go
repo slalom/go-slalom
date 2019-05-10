@@ -8,15 +8,21 @@ import (
 	"net/http"
 )
 
+func init() {
+	logrus.SetFormatter(&logrus.JSONFormatter{})
+}
+
 var (
 	logger = logrus.WithFields(logrus.Fields{"service": "api"})
 )
 
+// Server provides go-slalom server
 type Server struct {
 	router *mux.Router
 }
 
-func NewServer() (*Server) {
+// NewServer constructs new Server
+func NewServer() *Server {
 	srv := &Server{
 		router: mux.NewRouter(),
 	}
@@ -25,7 +31,7 @@ func NewServer() (*Server) {
 }
 
 func (s *Server) registerHandlers() {
-//	s.router.HandleFunc("/", s.indexHandler).HeadersRegexp("User-Agent", "^Mozilla.*").Methods("GET")
+	//	s.router.HandleFunc("/", s.indexHandler).HeadersRegexp("User-Agent", "^Mozilla.*").Methods("GET")
 	s.router.HandleFunc("/", s.infoHandler).Methods("GET")
 	s.router.HandleFunc("/version", s.versionHandler).Methods("GET")
 	s.router.HandleFunc("/health", s.healthHandler).Methods("GET")
@@ -35,6 +41,7 @@ func (s *Server) registerHandlers() {
 	s.router.HandleFunc("/ready/disable", s.disableReadyHandler).Methods("POST")
 }
 
+// ListenAndServe starts server and begins taking requests
 func (s *Server) ListenAndServe() {
 	logger.Infof("Starting server...")
 
