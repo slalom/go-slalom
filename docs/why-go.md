@@ -59,8 +59,8 @@ I will be frank and say when I first started using go I was not impressed. It se
 lambdas and streams in Java and the one-liners you can write would now take multiple lines and loops in go. I loved SpringBoot
 and magic it brings with annotations. 
 
-However, I think we tend to over design and over think how we code. Go helps you focus on the problem and less on the code.
-I still like SpringBoot, but with tools available for go do not miss it.
+However, I think we tend to over engineer and over think our code. Go helps you focus on the problem and less on the code.
+I still like SpringBoot, but with plethora of tools available for go I do not miss it.
  
 
 ![oo-dev](images/go-dev.jpeg)

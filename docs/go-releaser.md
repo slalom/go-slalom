@@ -54,4 +54,13 @@ brew tap tredfield/homebrew-tap
 brew install go-slalom
 ```
 
+You should see similar output
+```bash
+==> Installing tredfield/tap/go-slalom
+==> Downloading https://github.com/tredfield/go-slalom/releases/download/v0.0.1/go-slalom_0.0.1_Darwin_x86_64.tar.gz
+==> Downloading from https://github-production-release-asset-2e65be.s3.amazonaws.com/184909404/22f48880-71d3-11e9-951b-d
+######################################################################## 100.0%
+/usr/local/Cellar/go-slalom/0.0.1: 4 files, 10MB, built in 6 seconds
+```
+
 ![go-cloud](images/gopher-cloud.png)
