@@ -1,6 +1,6 @@
 # Why Go
 
-My favorite go proverbs from https://go-proverbs.github.io
+My favorite go proverbs from <https://go-proverbs.github.io>
 
 > A little copying is better than a little dependency.
 

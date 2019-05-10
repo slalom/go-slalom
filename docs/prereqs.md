@@ -14,11 +14,11 @@ Docker Desktop includes Kubernetes. Use the appropriate link to download and ins
 
 *macOS*
 
-https://hub.docker.com/editions/community/docker-ce-desktop-mac
+<https://hub.docker.com/editions/community/docker-ce-desktop-mac>
 
 *windows*
 
-https://hub.docker.com/editions/community/docker-ce-desktop-windows
+<https://hub.docker.com/editions/community/docker-ce-desktop-windows>
 
 Once Docker Desktop is installed, you need to explicitly enable Kubernetes support. Click the Docker icon in the status 
 bar, go to “Preferences”, and on the “Kubernetes” tab check “Enable Kubernetes”
@@ -70,7 +70,7 @@ Below are not required helpful to do beforehand
 
 You will likely want to setup a dashboard for Kubernetes but it is not required. Follow the steps in the link below to setup the dashboard
 
-https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+<https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/>
 
 
 #### go 101
