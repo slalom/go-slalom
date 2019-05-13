@@ -18,6 +18,8 @@ Docker Desktop includes Kubernetes. Use the appropriate link to download and ins
 
 *windows*
 
+**Note for Windows you will need to use the Windows Subsystem for Linux to run commands in the guides. If necessary please install WSL here:** <https://docs.microsoft.com/en-us/windows/wsl/install-win10>
+
 <https://hub.docker.com/editions/community/docker-ce-desktop-windows>
 
 Once Docker Desktop is installed, you need to explicitly enable Kubernetes support. Click the Docker icon in the status 

@@ -16,4 +16,4 @@
   - azure devops
 - add an ingress controller and define ingress
 
-![go-machine-gun](images/go-machine-gun.jpeg)
+![go-machine-gun](images/gopher-brown.png)
