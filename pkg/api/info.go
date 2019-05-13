@@ -1,12 +1,13 @@
 package api
 
 import (
-	"github.com/sirupsen/logrus"
 	"net/http"
 	"runtime"
 	"strconv"
 
-	"go-slalom/pkg/version"
+	"github.com/sirupsen/logrus"
+
+	"github.com/tredfield/go-slalom/pkg/version"
 )
 
 func (s *Server) infoHandler(w http.ResponseWriter, r *http.Request) {

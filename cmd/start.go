@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"go-slalom/pkg/api"
+	"github.com/tredfield/go-slalom/pkg/api"
 )
 
 // startCmd represents the start command

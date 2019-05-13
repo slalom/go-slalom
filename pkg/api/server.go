@@ -2,10 +2,12 @@ package api
 
 import (
 	"context"
+	"net/http"
+
+	"github.com/tredfield/go-slalom/pkg/signals"
+
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"
-	"go-slalom/pkg/signals"
-	"net/http"
 )
 
 func init() {
