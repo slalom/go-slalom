@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/tredfield/go-slalom/pkg/signals"
+	"github.com/slalom/go-slalom/pkg/signals"
 
 	"github.com/gorilla/mux"
 	"github.com/sirupsen/logrus"

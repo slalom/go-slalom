@@ -50,7 +50,7 @@ It will create a release in your repository with a changelog (containing commits
 You can use Homebrew to install it
 
 ```bash
-brew tap tredfield/homebrew-tap
+brew tap $USER/homebrew-tap
 brew install go-slalom
 ```
 

@@ -1,6 +1,6 @@
 # go-slalom
 
-<https://github.com/tredfield/go-slalom>
+<https://github.com/slalom/go-slalom>
 
 go-slalom is a tiny service made with [Go](https://golang.org) that showcases how to easily develop and deploy
 Go services in [Kubernetes](https://kubernetes.io).

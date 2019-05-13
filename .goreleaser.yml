@@ -35,7 +35,7 @@ brew:
 
   # Your app's homepage.
   # Default is empty.
-  homepage: "https://github.com/tredfield/go-slalom"
+  homepage: "https://github.com/slalom/go-slalom"
 
   # Your app's description.
   # Default is empty.

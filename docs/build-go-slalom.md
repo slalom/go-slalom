@@ -20,7 +20,7 @@ mkdir /tmp/slalom
 cd /tmp/slalom
  
 # clone go-slalom and cd to it
-git clone git@github.com:tredfield/go-slalom.git
+git clone git@github.com:slalom/go-slalom.git
 cd go-slalom
 
 # build

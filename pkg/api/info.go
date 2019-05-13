@@ -7,7 +7,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/tredfield/go-slalom/pkg/version"
+	"github.com/slalom/go-slalom/pkg/version"
 )
 
 func (s *Server) infoHandler(w http.ResponseWriter, r *http.Request) {

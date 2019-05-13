@@ -5,8 +5,8 @@
 Install go-slalom CLI:
 
 ```bash
-brew tap tredfield/homebrew-tap
-brew install tredfield/tap/go-slalom
+brew tap slalom/homebrew-tap
+brew install slalom/tap/go-slalom
 
 # verify, should see cli help 
 go-slalom
