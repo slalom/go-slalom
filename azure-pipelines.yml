@@ -2,11 +2,14 @@
 # Add steps that build, run tests, deploy, and more: https://aka.ms/yaml
 
 variables:
+  Major: 1
+  Minor: 0
   GO111MODULE: on
   GOBIN:  '$(GOPATH)/bin' # Go binaries path
   GOROOT: '/usr/local/go1.11' # Go installation path
   GOPATH: '$(system.defaultWorkingDirectory)/gopath' # Go workspace path
   modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
+  releaseTag: $(Major).$(Minor).$(BuildID)
 
 stages:
   - stage: PullRequest
@@ -46,3 +49,4 @@ stages:
             repository: 'goslalom'
             command: 'buildAndPush'
             Dockerfile: 'Dockerfile'
+            tags: $(releaseTag)
