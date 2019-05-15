@@ -9,11 +9,11 @@ variables:
   modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
 
 stages:
-  - stage: pull-request
+  - stage: PullRequest
     # only run for feature branches
     condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
     jobs:
-      - job: unit-test
+      - job: UnitTest
         pool:
           vmImage: 'ubuntu-latest'    
         steps:          
