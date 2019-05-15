@@ -1,9 +1,6 @@
 # Azure devops pipeline. Currently runs go tests
 # Add steps that build, run tests, deploy, and more: https://aka.ms/yaml
 
-pool:
-  vmImage: 'ubuntu-latest'
-
 variables:
   GO111MODULE: on
   GOBIN:  '$(GOPATH)/bin' # Go binaries path
@@ -11,18 +8,24 @@ variables:
   GOPATH: '$(system.defaultWorkingDirectory)/gopath' # Go workspace path
   modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
 
-
-steps:
-- script: |
-    mkdir -p '$(GOBIN)'
-    mkdir -p '$(GOPATH)/pkg'
-    mkdir -p '$(modulePath)'
-    shopt -s extglob
-    mv !(gopath) '$(modulePath)'
-    echo '##vso[task.prependpath]$(GOBIN)'
-    echo '##vso[task.prependpath]$(GOROOT)/bin'
-  displayName: 'Set up the Go workspace'
-
-- script: go test -v ./...
-  workingDirectory: '$(modulePath)'
-  displayName: 'Run tests'  
+stages:
+  - stage: PullRequest
+    # only run for feature branches
+    condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
+    jobs:
+      - job: UnitTest
+        pool:
+          vmImage: 'ubuntu-latest'    
+        steps:          
+        - script: |
+            mkdir -p '$(GOBIN)'
+            mkdir -p '$(GOPATH)/pkg'
+            mkdir -p '$(modulePath)'
+            shopt -s extglob
+            mv !(gopath) '$(modulePath)'
+            echo '##vso[task.prependpath]$(GOBIN)'
+            echo '##vso[task.prependpath]$(GOROOT)/bin'
+          displayName: 'Set up the Go workspace'
+        - script: go test -v ./...
+          workingDirectory: '$(modulePath)'
+          displayName: 'Run tests'  
