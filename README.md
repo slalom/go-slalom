@@ -2,6 +2,8 @@
 
 <https://github.com/slalom/go-slalom>
 
+[![Build Status](https://dev.azure.com/tredfield/go-slalom/_apis/build/status/slalom.go-slalom?branchName=master)](https://dev.azure.com/tredfield/go-slalom/_build/latest?definitionId=2&branchName=master)
+
 go-slalom is a tiny service made with [Go](https://golang.org) that showcases how to easily develop and deploy
 Go services in [Kubernetes](https://kubernetes.io).
 
