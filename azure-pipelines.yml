@@ -28,4 +28,21 @@ stages:
           displayName: 'Set up the Go workspace'
         - script: go test -v ./...
           workingDirectory: '$(modulePath)'
-          displayName: 'Run tests'  
+          displayName: 'Run tests'
+  
+  # build and push image
+  - stage: BuildImage
+    # only run for master branch
+    condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
+    jobs:
+      - job: BuildAndPushImage
+        pool:
+          vmImage: 'ubuntu-latest'    
+        steps:        
+        - task: Docker@2
+          displayName: 'Push Image'
+          inputs:
+            containerRegistry: 'go-slalom'
+            repository: 'goslalom'
+            command: 'buildAndPush'
+            Dockerfile: 'Dockerfile'
