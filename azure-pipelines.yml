@@ -1,9 +1,6 @@
 # Azure devops pipeline. Currently runs go tests
 # Add steps that build, run tests, deploy, and more: https://aka.ms/yaml
 
-pool:
-  vmImage: 'ubuntu-latest'
-
 variables:
   GO111MODULE: on
   GOBIN:  '$(GOPATH)/bin' # Go binaries path
@@ -17,6 +14,8 @@ stages:
     condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
     jobs:
       - job: unit-test
+        pool:
+          vmImage: 'ubuntu-latest'    
         steps:          
         - script: |
             mkdir -p '$(GOBIN)'
