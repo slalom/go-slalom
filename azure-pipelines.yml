@@ -23,6 +23,13 @@ steps:
     echo '##vso[task.prependpath]$(GOROOT)/bin'
   displayName: 'Set up the Go workspace'
 
-- script: go test -v ./...
-  workingDirectory: '$(modulePath)'
-  displayName: 'Run tests'  
+stages:
+  - stage: pull-request
+    # only run for feature branches
+    condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
+    jobs:
+      - job: unit-test
+        steps:          
+          - script: go test -v ./...
+            workingDirectory: '$(modulePath)'
+            displayName: 'Run tests'  
