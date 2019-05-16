@@ -86,7 +86,7 @@ stages:
     - task: PublishPipelineArtifact@0
       inputs:
         artifactName: 'manifests'
-        targetPath: 'manifests'
+        targetPath: 'deploy/azure'
 
 - stage: Deploy
   displayName: Deploy stage
