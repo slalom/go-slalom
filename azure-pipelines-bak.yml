@@ -91,7 +91,6 @@ stages:
 
   - stage: DeployDev
     displayName: Deploy to Dev
-    dependsOn: Build
     jobs:
     - deployment: Deploy
       displayName: Deploy to Dev
