@@ -54,7 +54,7 @@ stages:
         - task: GitHubRelease@0
           displayName: 'Tag Pre-Release'
           inputs:
-            gitHubConnection: slalom
+            gitHubConnection: 'go-slalom token'
             repositoryName: '$(Build.Repository.Name)'
             action: 'create'
             target: '$(Build.SourceVersion)'
