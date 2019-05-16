@@ -15,7 +15,7 @@ variables:
 
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '59f018ba-85e7-40e4-aa34-07a601ee7285'
-  imageRepository: 'goslalom'
+  imageRepository: 'go-slalom'
   containerRegistry: 'goslalom.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Major).$(Minor).$(Build.BuildID)'
