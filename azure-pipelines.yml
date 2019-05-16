@@ -28,8 +28,33 @@ variables:
   vmImageName: 'ubuntu-latest'
 
 stages:
+- stage: PullRequest
+  displayName: Pull Request stage
+  # only run for feature branches
+  condition: ne(variables['Build.SourceBranch'], 'refs/heads/master')
+  jobs:
+    - job: UnitTest
+      displayName: 'Run Unit Tests'
+      pool:
+        vmImage: $(vmImageName)
+      steps:          
+      - script: |
+          mkdir -p '$(GOBIN)'
+          mkdir -p '$(GOPATH)/pkg'
+          mkdir -p '$(modulePath)'
+          shopt -s extglob
+          mv !(gopath) '$(modulePath)'
+          echo '##vso[task.prependpath]$(GOBIN)'
+          echo '##vso[task.prependpath]$(GOROOT)/bin'
+        displayName: 'Set up the Go workspace'
+      - script: go test -v ./...
+        workingDirectory: '$(modulePath)'
+        displayName: 'Run tests'
+
 - stage: Build
   displayName: Build stage
+  # only run for master
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master')
   jobs:  
   - job: Build
     displayName: Build job
