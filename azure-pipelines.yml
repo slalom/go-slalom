@@ -98,7 +98,7 @@ stages:
     displayName: Deploy job
     pool:
       vmImage: $(vmImageName)
-    environment: 'slalomgoslalom.go-slalom-dev'
+    environment: 'dev.go-slalom-dev'
     strategy:
       runOnce:
         deploy:
