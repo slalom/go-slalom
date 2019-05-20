@@ -13,6 +13,12 @@ variables:
   Major: 1
   Minor: 0
 
+  # go setup
+  GOBIN:  '$(GOPATH)/bin' # Go binaries path
+  GOROOT: '/usr/local/go1.11' # Go installation path
+  GOPATH: '$(system.defaultWorkingDirectory)/gopath' # Go workspace path
+  modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
+
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '59f018ba-85e7-40e4-aa34-07a601ee7285'
   imageRepository: 'go-slalom'
