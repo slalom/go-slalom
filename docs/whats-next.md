@@ -13,7 +13,6 @@
 - setup ci/cd
   - gitlab
   - AWS code build and code pipeline
-  - azure devops
 - add an ingress controller and define ingress
 
 ![go-machine-gun](images/gopher-brown.png)
