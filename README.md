@@ -24,6 +24,7 @@ This repository and guides will help you
 - [Run go-slalom](docs/build-go-slalom.md)
 - [Deploy go-slalom with skaffold](docs/skaffold-go-slalom.md)
 - [Release go-slalom](docs/go-releaser.md)
+- [Deploy go-slalom with Azure DevOps](docs/azure-devops.md)
 - [What's Next?](docs/whats-next.md)
 
 ### Quick 101 on go and kubernetes

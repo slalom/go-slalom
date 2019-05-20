@@ -1,5 +1,5 @@
 # Base build image
-FROM golang:1.12 AS build_base
+FROM golang:1.12 AS builder
 
 WORKDIR /go/src/go-slalom
 
@@ -19,7 +19,7 @@ RUN go mod download
 
 
 # This image builds the server
-FROM build_base AS compile
+FROM builder AS compile
 # Here we copy the rest of the source code
 COPY . .
 
