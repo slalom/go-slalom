@@ -85,8 +85,9 @@ stages:
       inputs:
         targetType: 'filePath'
         filePath: 'ci/docker-azure-build.sh'
-        arguments:
-          - $(tag)
+        arguments: |
+          $(tag)
+
     # - task: Docker@2
     #   displayName: Build and push an image to container registry
     #   inputs:
