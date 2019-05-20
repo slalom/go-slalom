@@ -10,6 +10,9 @@ application to multiple cloud providers.
 **That's cool, but...** When do I need to deploy to multiple cloud providers? Probably never. But if a client is using 
 (or open to using) Kubernetes and you know Kubernetes, then you know how to deploy your application regardless of cloud provider.
 
+#### Declarative
+Desribe and manage applications and workloads declartively
+
 #### Velocity
 Deploying a new version of an application or updating an application running in Kubernetes is fast and easy.
 
