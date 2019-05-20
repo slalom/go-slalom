@@ -7,8 +7,7 @@ WORKDIR /go/src/go-slalom
 ENV GO111MODULE=on
 
 # We want to populate the module cache based on the go.{mod,sum} files.
-COPY go.mod .
-COPY go.sum .
+COPY go.mod go.sum ./
 
 # This is the ‘magic’ step that will download all the dependencies that are specified in
 # the go.mod and go.sum file.
