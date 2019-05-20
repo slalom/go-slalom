@@ -23,7 +23,7 @@ The `--cache-from` tells Docker to use a specific image as part of it's build ca
 
 ## Putting it all together
 
-The script [ci/docker-azure-build.sh](ci/docker-azure-build.sh) performs the following steps:
+The script [ci/docker-azure-build.sh](../ci/docker-azure-build.sh) performs the following steps:
 
 1. Pull the `builder` image to use as a build cache
 2. Build the `builder` image using pulled image from step 1 as a build cache. If the layers (i.e. dependencies) have not changed in the new build, then image built in this step will come entirely from cache. Otherwise depenencies will be updated in the image.
