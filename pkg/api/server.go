@@ -18,6 +18,11 @@ var (
 	logger = logrus.WithFields(logrus.Fields{"service": "api"})
 )
 
+const (
+	staticDir = "/static/"
+	port      = "8080"
+)
+
 // Server provides go-slalom server
 type Server struct {
 	router *mux.Router
@@ -33,8 +38,10 @@ func NewServer() *Server {
 }
 
 func (s *Server) registerHandlers() {
-	//	s.router.HandleFunc("/", s.indexHandler).HeadersRegexp("User-Agent", "^Mozilla.*").Methods("GET")
+	s.router.PathPrefix(staticDir).Handler(http.StripPrefix(staticDir, http.FileServer(http.Dir("."+staticDir))))
+	s.router.HandleFunc("/", s.indexHandler).HeadersRegexp("User-Agent", "^Mozilla.*").Methods("GET")
 	s.router.HandleFunc("/", s.infoHandler).Methods("GET")
+	s.router.HandleFunc("/welcome", s.welcomeHandler).Methods("GET")
 	s.router.HandleFunc("/version", s.versionHandler).Methods("GET")
 	s.router.HandleFunc("/health", s.healthHandler).Methods("GET")
 	s.router.HandleFunc("/health/disable", s.disableHealthHandler).Methods("POST")
@@ -55,7 +62,7 @@ func (s *Server) ListenAndServe() {
 
 	// create http server
 	srv := &http.Server{
-		Addr:    ":8080",
+		Addr:    ":" + port,
 		Handler: s.router,
 	}
 

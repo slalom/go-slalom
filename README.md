@@ -25,8 +25,12 @@ This repository and guides will help you
 - [Deploy go-slalom with skaffold](docs/skaffold-go-slalom.md)
 - [Release go-slalom](docs/go-releaser.md)
 - [Deploy go-slalom with Azure DevOps](docs/azure-devops.md)
-- [Faster Builds with Docker Layer Caching](docs/docker-layer-caching.md)
 - [What's Next?](docs/whats-next.md)
+
+## Additional Guides
+
+- [Create and serve a UI with go and go templates](docs/go-ui-templates.md)
+- [Faster Builds with Docker Layer Caching](docs/docker-layer-caching.md)
 
 ### Quick 101 on go and kubernetes
 
