@@ -21,7 +21,7 @@ variables:
   modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'a6070c24-63b4-4b49-b508-8cb764cb7ad8'
+  dockerRegistryServiceConnection: 'goslalom'
   imageRepository: 'go-slalom'
   containerRegistry: 'goslalom.azurecr.io'
   dockerfilePath: '**/Dockerfile'
