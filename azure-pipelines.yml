@@ -28,7 +28,7 @@ variables:
   tag: '$(Major).$(Minor).$(Build.BuildID)'
   
   # Kubernetes Namespace
-  k8sNamespace: 'go-slalom-dev'
+  k8sNamespace: 'go-slalom'
   imagePullSecret: 'goslalom77be-auth'
 
   # Agent VM image name
@@ -110,7 +110,7 @@ stages:
     displayName: Deploy job
     pool:
       vmImage: $(vmImageName)
-    environment: 'dev.go-slalom-dev'
+    environment: 'dev.go-slalom'
     strategy:
       runOnce:
         deploy:
