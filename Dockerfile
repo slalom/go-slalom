@@ -30,5 +30,7 @@ RUN GIT_TAG=$(git describe --tags --always) GIT_COMMIT=$(git rev-list -1 HEAD) &
 FROM scratch AS go_slalom
 
 # Finally we copy the statically compiled Go binary.
+COPY --from=compile /go/src/go-slalom/templates ./templates
+COPY --from=compile /go/src/go-slalom/static ./static
 COPY --from=compile /go/bin/go-slalom /bin/go-slalom
 ENTRYPOINT ["/bin/go-slalom"]
