@@ -19,8 +19,9 @@ var (
 )
 
 const (
-	staticDir = "/static/"
-	port      = "8080"
+	staticDir   = "/static/"
+	templateDir = "/templates/"
+	port        = "8080"
 )
 
 // Server provides go-slalom server
@@ -39,6 +40,7 @@ func NewServer() *Server {
 
 func (s *Server) registerHandlers() {
 	s.router.PathPrefix(staticDir).Handler(http.StripPrefix(staticDir, http.FileServer(http.Dir("."+staticDir))))
+	s.router.PathPrefix(templateDir).Handler(http.StripPrefix(templateDir, http.FileServer(http.Dir("."+templateDir))))
 	s.router.HandleFunc("/", s.indexHandler).HeadersRegexp("User-Agent", "^Mozilla.*").Methods("GET")
 	s.router.HandleFunc("/", s.infoHandler).Methods("GET")
 	s.router.HandleFunc("/welcome", s.welcomeHandler).Methods("GET")
