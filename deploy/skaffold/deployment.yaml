@@ -23,6 +23,12 @@ spec:
         command:
           - go-slalom
           - start
+        env:  
+          - name: MAGIC_VALUE
+            valueFrom:
+              configMapKeyRef:
+                name: go-slalom
+                key: magic_value
         ports:
         - name: http
           containerPort: 8080

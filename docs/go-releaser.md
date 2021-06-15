@@ -68,6 +68,6 @@ You should see similar output
 
 ## Next
 
-[What's Next?](docs/whats-next.md)
+[What's Next?](whats-next.md)
 
 ![go-cloud](images/gopher-cloud.png)
