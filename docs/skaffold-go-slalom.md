@@ -1,37 +1,40 @@
 # deploy go-slalom to kubernetes
 
-We will use [skaffold](https://skaffold.dev) to deploy go-slalom. 
+We will use [skaffold](https://skaffold.dev) to deploy go-slalom
 
-Skaffold is a tool that will build a docker image and deploy it to kubernetes. It can run in `dev` mode where it 
-listens to changes and will automatically rebuild and update the deployed version in kubernetes. Or you can use `run`
-to do one time deployment. It is a great tool for development but can also be applied in your ci/cd pipelines.
+Skaffold is a tool that will build a docker image and deploy it to kubernetes. It can run in `dev` mode where it listens to changes and will automatically rebuild and update the deployed version in kubernetes. Or you can use `run` to do one time deployment. It is a great tool for development but can also be applied in your ci/cd pipelines.
 
-### install skaffold
+## install skaffold
 
 ```bash
 brew install skaffold
 ```
 
-### check kubernetes is running
+## check kubernetes is running
+
 First kill go-slalom if it is still running using `ctrl-c`. It should log showing it has handled the interrupt it received.
+
 ```bash
 ^C{"level":"info","msg":"received interrupt","pkg":"signals","time":"2019-05-09T13:27:32-07:00"}
 {"level":"warning","msg":"stopping server","service":"api","time":"2019-05-09T13:27:32-07:00"}
 ```
 
 Make sure `kubernetes` is running in docker desktop.
+
 ```bash
 kubectl config current-context
 ```
 
 You should see output `docker-for-desktop`
 
-Now run 
+Now run
+
 ```bash
 kubectl cluster-info
 ```
 
-You should see the following output 
+You should see the following output
+
 ```bash
 Kubernetes master is running at https://localhost:6443
 KubeDNS is running at https://localhost:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
@@ -41,11 +44,12 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 
 If all above is good then kubernetes is running!
 
-### run skaffold
+## run skaffold
 
 Ok, now let's deploy go-slalom. Run
+
 ```bash
-skaffold dev
+skaffold dev --port-forward=pods
 ```
 
 skaffold will do the following
@@ -59,22 +63,26 @@ skaffold will do the following
 ### verify go-slalom is running
 
 Check kubernetes
+
 ```bash
 kubectl get pods
 ```
 
 You should see output similar to
+
 ```bash
 NAME                         READY   STATUS    RESTARTS   AGE
 go-slalom-5dbc56689c-jfsd8   1/1     Running   0          4m
 ```
 
 curl go-slalom
+
 ```bash
 curl localhost:8080
 ```
 
 You should see similar output below and logging in console where skaffold is running.
+
 ```bash
 {
   "hostname": "TODO",
@@ -86,7 +94,8 @@ You should see similar output below and logging in console where skaffold is run
   "goarch": "amd64",
   "runtime": "go1.12.4",
   "num_goroutine": "6",
-  "num_cpu": "8"
+  "num_cpu": "8",
+  "magic_value": "TODO"
 }
 ```
 
@@ -112,7 +121,7 @@ Skaffold will again port forward the container. Note the port and use to test
 
 ```bash
 # use port from skaffold
-curl localhost:8081
+curl localhost:8080
 ```
 
 You should now see the hostname matches the pod it is running in.
@@ -124,5 +133,8 @@ When skaffold detects the change it is doing the same steps listed above. The th
 using the tag from the last image it generated. There are different strategies that can be used with skaffold for managing
 the tag.
 
-![slalom-gopher](images/gopherski.png)
+## Next
 
+[configmaps](configmaps.md)
+
+![slalom-gopher](images/gopherski.png)
