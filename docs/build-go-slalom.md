@@ -7,7 +7,7 @@ go-slalom demonstrates how to create a basic service to run in kubernetes. The s
 - endpoints for enabling/disabling readiness and liveness endpoints
 - endpoint for basic service information
 
-### build go-slalom
+## build go-slalom
 
 First lets clone and build go-slalom locally
 
@@ -27,7 +27,7 @@ cd go-slalom
 go build
 ```
 
-### go-slalom cli
+## go-slalom cli
 
 go-slalom includes a basic cli built using [cobra](https://github.com/spf13/cobra). It is common in go to build a cli
 for starting a service and/or administering the service. Lets check it out
@@ -48,8 +48,8 @@ func main() {
 The package `cmd` contains the commands. The file `root.go` implements the root command and the other files implement 
 sub commands. corba provides a clean cli.
 
+## start go-slalom
 
-### start go-slalom
 One of the cli commands is `start`. Run it to start ther server
 
 ```bash
@@ -57,11 +57,13 @@ One of the cli commands is `start`. Run it to start ther server
 ```
 
 You should see logging similar to below. 
+
 ```bash
 {"level":"info","msg":"Starting server...","service":"api","time":"2019-05-09T13:22:03-07:00"}
 ```
 
-In a separate console run `curl localhost:8008/version`. You should see similar output 
+In a separate console run `curl localhost:8008/version`. You should see similar output
+
 ```bash
 {
   "commit": "unknown",
@@ -72,6 +74,7 @@ In a separate console run `curl localhost:8008/version`. You should see similar 
 ### go-slalom server
 
 The `start` command (in cmd package) calls
+
 ```go
 api.NewServer().ListenAndServe()
 ``` 
@@ -86,5 +89,8 @@ See `pkg/api/server.go`. It does the following:
 - disable probes to tell kubernetes it is unavailable
 - gracefully shutdown server
 
+## Next
+
+[Deploy go-slalom with skaffold](skaffold-go-slalom.md)
 
 ![gopher-head](images/gopher_head.png)

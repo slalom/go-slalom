@@ -6,4 +6,5 @@ build:
 deploy:
   kubectl:
     manifests:
-    - deploy/skaffold/deployment.yaml
+      - deploy/skaffold/configmap.yaml
+      - deploy/skaffold/deployment.yaml
